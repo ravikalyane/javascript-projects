@@ -73,7 +73,11 @@ setInterval(digitalClock, 1000);
 function digitalClock() {
     if (new Date().getHours() < 10) {
         document.querySelector(".digital-hours").innerHTML = "0" + new Date().getHours();
-    } else {
+    } 
+    else if (new Date().getHours()>12) {
+        document.querySelector(".digital-hours").innerHTML = "0" + (new Date().getHours() - 12);  
+    }
+    else {
         document.querySelector(".digital-hours").innerHTML = new Date().getHours();
     }
 
@@ -91,8 +95,8 @@ function digitalClock() {
 
 // ------------------------------------------------- Counter --------------------------------------------------- //
 let count = 0,
-    btnIncrease = document.querySelector("#increase"),
-    btnDecrease = document.querySelector("#decrease");
+btnIncrease = document.querySelector("#increase"),
+btnDecrease = document.querySelector("#decrease");
 btnReset = document.querySelector("#reset");
 
 btnIncrease.addEventListener("click", increase);
