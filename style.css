@@ -1,6 +1,6 @@
 html {
     scroll-behavior: smooth;
-    overflow-y: hidden;
+    /*overflow-y: hidden;*/
 }
 
 * {
@@ -220,6 +220,15 @@ html {
     position: relative;
     font-size: 7rem;
     color: white;
+}
+@media only screen and (max-width: 720px){
+    #digital-clock {
+    min-height: 100vh;
+    background-color: #0b5563;
+    position: relative;
+    font-size: 3rem;
+    color: white;
+}
 }
 
 .digital-hours {
