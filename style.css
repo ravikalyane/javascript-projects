@@ -1,16 +1,3 @@
-div:-webkit-full-screen {
-  width: 100% !important;
-}
-div:-moz-full-screen {
-  width: 100% !important;
-}
-div:-ms-fullscreen {
-  width: 100% !important;
-}
-div:fullscreen {
-  width: 100% !important;
-}
-
 html {
     scroll-behavior: smooth;
     overflow-y: hidden;
