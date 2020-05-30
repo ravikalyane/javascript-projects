@@ -1,56 +1,60 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+        <link rel="stylesheet" type="text/css" href="style.css" />
 
-	<!-- Font Awesome -->
-	<link href="https://kit-pro.fontawesome.com/releases/v5.13.0/css/pro.min.css" rel="stylesheet">
-	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
-	<title>JS Projects</title>
-</head>
-<body>
-	<!-- Analog Clock -->
-	<div class="toggle">
-		<div class="toggle-button"></div>
-	</div>
-	<div id="project-clock">
-		<div class="clock">
-			<div class="hand hour" data-hour-hand></div>
-			<div class="hand minute" data-minute-hand></div>
-			<div class="hand second" data-second-hand></div>
-			<div class="number number1"><div class="vertical1">1</div></div>
-			<div class="number number2"><div class="vertical2">2</div></div>
-			<div class="number number3"><div class="vertical3">3</div></div>
-			<div class="number number4"><div class="vertical4">4</div></div>
-			<div class="number number5"><div class="vertical5">5</div></div>
-			<div class="number number6"><div class="vertical6">6</div></div>
-			<div class="number number7"><div class="vertical7">7</div></div>
-			<div class="number number8"><div class="vertical8">8</div></div>
-			<div class="number number9"><div class="vertical9">9</div></div>
-			<div class="number number10"><div class="vertical10">10</div></div>
-			<div class="number number11"><div class="vertical11">11</div></div>
-			<div class="number number12">12</div>
-			<div class="center-dot"></div>
-			<button id="light-mode">Light <i class="fal fa-sun"></i></button>
-			<button id="dark-mode">Dark <i class="fad fa-moon"></i></i></button>
-		</div>
-	</div>
+        <!-- Font Awesome -->
+        <link href="https://kit-pro.fontawesome.com/releases/v5.13.0/css/pro.min.css" rel="stylesheet" />
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+        <title>JS Projects</title>
+    </head>
+    <body>
+        <!-- Analog Clock -->
+        <div class="toggle"><div class="toggle-button"></div></div>
+        <div id="project-clock">
+            <div class="clock">
+                <div class="hand hour" data-hour-hand></div>
+                <div class="hand minute" data-minute-hand></div>
+                <div class="hand second" data-second-hand></div>
+                <div class="number number1"><div class="vertical1">1</div></div>
+                <div class="number number2"><div class="vertical2">2</div></div>
+                <div class="number number3"><div class="vertical3">3</div></div>
+                <div class="number number4"><div class="vertical4">4</div></div>
+                <div class="number number5"><div class="vertical5">5</div></div>
+                <div class="number number6"><div class="vertical6">6</div></div>
+                <div class="number number7"><div class="vertical7">7</div></div>
+                <div class="number number8"><div class="vertical8">8</div></div>
+                <div class="number number9"><div class="vertical9">9</div></div>
+                <div class="number number10"><div class="vertical10">10</div></div>
+                <div class="number number11"><div class="vertical11">11</div></div>
+                <div class="number number12">12</div>
+                <div class="center-dot"></div>
+                <button id="light-mode">Light <i class="fal fa-sun"></i></button>
+                <button id="dark-mode">Dark <i class="fad fa-moon"></i></button>
+            </div>
+            <a href="#digital-clock" class="next">Next<i class="fad fa-chevron-double-right"></i></a>
+        </div>
 
+        <!-- Digital Clock -->
+        <div id="digital-clock" class="center">
+            <span class="digital-hours center"></span>:<span class="digital-minutes center"></span>:<span class="digital-seconds center"></span>
+            <a href="#project-clock" class="previous"><i class="fad fa-chevron-double-right"></i> Previous</a>
+            <a href="#project-counter" class="next">Next <i class="fad fa-chevron-double-right"></i></a>
+        </div>
 
-	<!-- Counter -->
-
-	<div id="project-counter">
-		<div>
-			<button id="decrease" class="decrease text-left">-</button>
-			<button id="increase" class="increase text-right">+</button>
-			<button id="count" class="count">0</button>
-			<button id="reset" class="reset">Reset</button>
-		</div>
-	</div>
-
-</body>
-<script src="script.js"></script>
+        <!-- Counter -->
+        <div id="project-counter">
+            <div>
+                <button id="decrease" class="decrease text-center">-</button>
+                <button id="increase" class="increase text-right">+</button>
+                <button id="count" class="count">0</button>
+                <button id="reset" class="reset">Reset</button>
+            </div>
+            <a href="#digital-clock" class="previous"><i class="fad fa-chevron-double-right"></i>Previous</a>
+        </div>
+    </body>
+    <script src="script.js"></script>
 </html>
