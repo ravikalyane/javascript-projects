@@ -46,10 +46,12 @@ function digitalClock() {
         document.querySelector(".digital-hours").innerHTML = "0" + new Date().getHours()
     } 
     else if (new Date().getHours()>12) {
-        document.querySelector(".digital-hours").innerHTML = "0" + (new Date().getHours() - 12)  
-    }
-    else {
-        document.querySelector(".digital-hours").innerHTML = new Date().getHours()
+        let newTime = new Date().getHours() - 12 
+        if(newTime <= 9){
+            document.querySelector(".digital-hours").innerHTML = "0" + newTime
+        }else{
+            document.querySelector(".digital-hours").innerHTML = newTime
+        }
     }
 
     if (new Date().getMinutes() < 10) {
@@ -57,6 +59,7 @@ function digitalClock() {
     } else {
         document.querySelector(".digital-minutes").innerHTML = new Date().getMinutes()
     }
+    
     if (new Date().getSeconds() < 10) {
         document.querySelector(".digital-seconds").innerHTML = "0" + new Date().getSeconds()
     } else {
