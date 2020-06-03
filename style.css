@@ -1,5 +1,6 @@
 html {
     scroll-behavior: smooth;
+    font-family: "Helvetica", sans-serif
     /*overflow-y: hidden;*/
 }
 
@@ -38,9 +39,52 @@ html {
 .previous:hover i {
     transform: rotate(180deg);
 }
+#dark-light-mode{
+   position: absolute;
+   top: 10%;
+   right: 10%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+#dark-light-mode i{
+    font-size: 20px;
+    padding: 6px;
+    color: grey;
+}
+input{
+    position: relative;
+    width: 50px;
+    height: 20px;
+    background-color: #0078f8;
+    -webkit-appearance: none;
+    z-index: 20;
+    outline: none;
+    transition: all 0.5s ease;
+    border-radius: 20px;
+}
 
+input:checked{
+    background-color: #0078f8;
+}
+
+input::before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    transform: scale(0.7,0.7);
+    transition: all 0.5s ease;
+}
+input:checked::before{
+    left: 30px;    
+}
+/* Clock */
 #project-clock {
-    /*background-color: #8EC5FC;*/
     background-image: linear-gradient(62deg, #8ec5fc 0%, #e0c3fc 100%);
     display: flex;
     justify-content: center;
@@ -51,6 +95,10 @@ html {
     font-family: Gotham Rounded, sans-serif;
     position: relative;
 }
+#project-clock.dark{
+    background-color: #000000;
+    background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
+}
 .clock {
     width: 400px;
     height: 400px;
@@ -59,8 +107,11 @@ html {
     background-color: rgba(255, 255, 255, 0.8);
     position: relative;
 }
+.clock.dark{
+    background-color: black;
+}
 
-.clock .number {
+.number {
     padding: 10px;
     --rotation: 0;
     font-size: 2rem;
@@ -71,42 +122,45 @@ html {
     transform: rotate(var(--rotation));
     color: black;
 }
+.number.dark{
+    color: white;
+}
 
-.clock .number1 {
+.number1 {
     --rotation: 30deg;
 }
-.clock .number2 {
+.number2 {
     --rotation: 60deg;
 }
-.clock .number3 {
+.number3 {
     --rotation: 90deg;
 }
-.clock .number4 {
+.number4 {
     --rotation: 120deg;
 }
-.clock .number5 {
+.number5 {
     --rotation: 150deg;
 }
-.clock .number6 {
+.number6 {
     --rotation: 180deg;
 }
-.clock .number7 {
+.number7 {
     --rotation: 210deg;
 }
-.clock .number8 {
+.number8 {
     --rotation: 240deg;
 }
-.clock .number9 {
+.number9 {
     --rotation: 270deg;
 }
-.clock .number10 {
+.number10 {
     --rotation: 300deg;
 }
-.clock .number11 {
+.number11 {
     --rotation: 330deg;
 }
 
-.clock .hand {
+.hand {
     --rotation: 0;
     position: absolute;
     bottom: 50%;
@@ -119,22 +173,35 @@ html {
     transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
 }
 
-.clock .hand.second {
+.second {
     background-color: black;
     width: 2px;
     height: 45%;
 }
-.clock .hand.hour {
+
+.second.dark {
+    background-color: red;
+}
+
+.hour {
     background-color: black;
     width: 10px;
     height: 35%;
 }
-.clock .hand.minute {
+
+.hour.dark {
+    background-color: red;
+}
+
+.minute {
     background-color: black;
     width: 6px;
     height: 44%;
 }
 
+.minute.dark{
+    background-color: white;
+}
 .center-dot {
     position: absolute;
     width: 20px;
@@ -145,6 +212,9 @@ html {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+.center-dot.dark{
+    background-color: red;
 }
 
 /*******straighten*********/
@@ -187,8 +257,8 @@ html {
 #dark-mode:active {
     font-size: 16px;
     position: absolute;
-    right: -5%;
-    top: -30%;
+    right: 10%;
+    top: 10%;
     background-color: transparent;
     border: 2px grey solid;
     border-radius: 10px;
@@ -201,8 +271,8 @@ html {
 #light-mode:active {
     font-size: 16px;
     position: absolute;
-    right: -5%;
-    top: -30%;
+    right: 10%;
+    top: 10%;
     background-color: transparent;
     border: 2px grey solid;
     border-radius: 10px;
@@ -212,7 +282,7 @@ html {
     outline: none;
 }
 
-/*	digital clock  */
+/*  digital clock  */
 
 #digital-clock {
     min-height: 100vh;
@@ -221,14 +291,14 @@ html {
     font-size: 7rem;
     color: white;
 }
-@media only screen and (max-width: 720px){
+@media only screen and (max-width: 720px) {
     #digital-clock {
-    min-height: 100vh;
-    background-color: #0b5563;
-    position: relative;
-    font-size: 3rem;
-    color: white;
-}
+        min-height: 100vh;
+        background-color: #0b5563;
+        position: relative;
+        font-size: 3rem;
+        color: white;
+    }
 }
 
 .digital-hours {
